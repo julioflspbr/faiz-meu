@@ -1,0 +1,50 @@
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  User:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "User"
+      AtributeDefinitions:
+        -
+          AttributeName: "Identifier"
+          AttributeType: "B"
+      KeySchema:
+        -
+          AttributeName: "Identifier"
+          KeyType: "HASH"
+  Task:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: "Task"
+      StreamSpecification:
+        StreamViewType: "NEW_IMAGE"
+      AttributeDefinitions:
+        -
+          AttributeName: "Identifier"
+          AttributeType: "B"
+      KeySchema:
+        -
+          AttributeName: "User"
+          KeyType: "HASH"
+  UserTask:
+    Type: AWS::DynamoDB::Table
+    DependsOn:
+      - User
+      - Task
+    Properties:
+      TableName: "UserTask"
+      AttributeDefinitions:
+        -
+          AttributeName: "User"
+          AttributeType: "B"
+        -
+          AttributeName: "Task"
+          AttributeType: "B"
+      KeySchema:
+        -
+          AttributeName: "User"
+          KeyType: "HASH"
+        -
+          AttributeName: "Task"
+          KeyType: "RANGE"
+
