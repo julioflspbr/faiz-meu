@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		703933D1288DD0FB001BDDF8 /* ApplicationRunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 703933D0288DD0FB001BDDF8 /* ApplicationRunLoop.m */; };
 		705FA0EB28890E7900D8EC0D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FA0EA28890E7900D8EC0D /* main.swift */; };
 		705FA0EE28890F4C00D8EC0D /* bootstrap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 705FA0E028890DF000D8EC0D /* bootstrap */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		703933CF288DD0FB001BDDF8 /* FaizMeuLambda-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaizMeuLambda-Bridging-Header.h"; sourceTree = "<group>"; };
+		703933D0288DD0FB001BDDF8 /* ApplicationRunLoop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationRunLoop.m; sourceTree = SOURCE_ROOT; };
+		703933D2288DD132001BDDF8 /* ApplicationRunLoop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationRunLoop.h; sourceTree = "<group>"; };
 		705FA0E028890DF000D8EC0D /* bootstrap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bootstrap; sourceTree = BUILT_PRODUCTS_DIR; };
 		705FA0EA28890E7900D8EC0D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +47,9 @@
 		705FA0D728890DF000D8EC0D = {
 			isa = PBXGroup;
 			children = (
+				703933D2288DD132001BDDF8 /* ApplicationRunLoop.h */,
+				703933D0288DD0FB001BDDF8 /* ApplicationRunLoop.m */,
+				703933CF288DD0FB001BDDF8 /* FaizMeuLambda-Bridging-Header.h */,
 				705FA0EA28890E7900D8EC0D /* main.swift */,
 				705FA0E128890DF000D8EC0D /* Products */,
 			);
@@ -115,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				703933D1288DD0FB001BDDF8 /* ApplicationRunLoop.m in Sources */,
 				705FA0EB28890E7900D8EC0D /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +254,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = bootstrap;
+				SWIFT_OBJC_BRIDGING_HEADER = "FaizMeuLambda-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -262,6 +271,7 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = bootstrap;
+				SWIFT_OBJC_BRIDGING_HEADER = "FaizMeuLambda-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
